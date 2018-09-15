@@ -31,7 +31,7 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public void createUser(Usuario user) throws UsernameAlreadyExistsException {
 		UserDomain userDomain =  userRepository.findByUsernameIgnoreCase(user.getUsername());
-		if(user !=null) {
+		if(userDomain !=null) {
 			throw new UsernameAlreadyExistsException("Username Already Exists");
 		}
 		
