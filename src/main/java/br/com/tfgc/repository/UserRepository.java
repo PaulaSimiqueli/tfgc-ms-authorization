@@ -11,5 +11,6 @@ import br.com.tfgc.domain.UserDomain;
 public interface UserRepository extends CrudRepository<UserDomain, Long> {
 
 	List<UserDomain> findByNameContainingIgnoreCase(String name);
+	UserDomain findByUsernameIgnoreCase(String username);
 	
 }
